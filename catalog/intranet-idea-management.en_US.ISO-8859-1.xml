@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<message_catalog package_key="intranet-idea-management" locale="en_US" charset="ISO-8859-1">
+
+  <msg key="Comment">Comment</msg>
+  <msg key="Comments">Comments</msg>
+  <msg key="From">From</msg>
+  <msg key="Idea_Management">Idea Management</msg>
+  <msg key="Name">Name</msg>
+  <msg key="Search">Search</msg>
+  <msg key="Status">Status</msg>
+  <msg key="Thumb">Thumb</msg>
+  <msg key="Thumbs">Thumbs</msg>
+  <msg key="User_Information">User Information</msg>
+</message_catalog>
