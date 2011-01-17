@@ -72,6 +72,8 @@ function thumbs_change (name, object) {
 		</td>
 	
 		<td class="list-narrow">
+			@ideas.thumbs_up_count_in_last_month@
+			@ideas.creation_date@
 			<a href="@ideas.idea_url;noquote@">@ideas.project_name@</a>
 			<br>
 			@ideas.idea_description;noquote@
@@ -121,8 +123,7 @@ function thumbs_change (name, object) {
 </td>
 <td align=left width="40%">
 
-	<h1>#intranet-idea-management.Your_Voted_Items#</h1>
-
+	<h1><%= [lang::message::lookup "" intranet-idea-management.Your_Votes "Your Votes"] %></h1>
 	<if @thumb_count@>
 
 		<table class="list" width="100%">

@@ -19,6 +19,7 @@ ad_page_contract {
     { how_many "" }
     { view_name "idea_management_list" }
     { idea_search "" }
+    { perspective "" }
 }
 
 # ---------------------------------------------------------------
@@ -48,6 +49,25 @@ if {!$view_ideas_all_p && !$user_is_admin_p} { set ticket_type_id $idea_ticket_t
 
 
 # ---------------------------------------------------------------
+# Perspectives
+# ---------------------------------------------------------------
+
+set order_by_clause "thumbs_up_count DESC"
+
+switch $perspective {
+    Top { set order_by_clause "thumbs_up_count DESC" }
+    Hot { set order_by_clause "thumbs_up_count_in_last_month, thumbs_up_count DESC" }
+    New { set order_by_clause "creation_date DESC" }
+    Accepted { set ticket_status_id [im_ticket_status_assigned] }
+    Done { set ticket_status_id [im_ticket_status_closed] }
+    default {
+	# Nothing, show "Top" order
+    }
+}
+
+
+
+# ---------------------------------------------------------------
 # Main SQL
 # ---------------------------------------------------------------
 
@@ -58,8 +78,10 @@ set ideas_sql "
 		p.*,
 		ium.*,
 		o.creation_user,
+		o.creation_date,
 		u.username,
 		coalesce(t.ticket_thumbs_up_count, 0) as thumbs_up_count,
+		(select count(*) from im_idea_user_map m where thumbs_direction='up' and last_modified > now()::date -30) as thumbs_up_count_in_last_month,
 		(select count(*)-1 from im_forum_topics ft where ft.object_id = t.ticket_id) as comment_count
 	from	im_tickets t
 		LEFT OUTER JOIN im_idea_user_map ium ON (ium.ticket_id = t.ticket_id and ium.user_id = :current_user_id),
@@ -70,7 +92,7 @@ set ideas_sql "
 		p.project_id = o.object_id and
 		t.ticket_type_id in ([join [im_sub_categories $idea_ticket_type_id] ","])
 	order by
-		coalesce(t.ticket_thumbs_up_count,-0.5) DESC,
+		$order_by_clause,
 		t.ticket_prio_id
 "
 

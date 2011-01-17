@@ -20,6 +20,7 @@ create table im_idea_user_map (
 	user_id			integer
 				constraint im_idea_user_map_user_fk
 				references persons,
+	last_modified		timestamptz,
 	thumbs_direction	varchar(10)
 				constraint im_idea_user_map_thumbs_dir_ck
 				check (thumbs_direction in ('up','down')),

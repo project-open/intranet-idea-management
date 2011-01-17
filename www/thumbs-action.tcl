@@ -48,8 +48,9 @@ set exists_p [db_string exists "
 if {$exists_p} {
 
     db_dml update "
-	update	im_idea_user_map
-	set	thumbs_direction = :direction
+	update	im_idea_user_map set
+		thumbs_direction = :direction,
+		last_modified = now()
 	where	ticket_id = :ticket_id and
 		user_id = :current_user_id
     "
@@ -61,11 +62,13 @@ if {$exists_p} {
 		map_id,
 		ticket_id,
 		user_id,
+		last_modified,
 		thumbs_direction
 	) values (
 		nextval('im_idea_user_map_seq'),
 		:ticket_id,
 		:current_user_id,
+		now(),
 		:direction
 	)
     "
