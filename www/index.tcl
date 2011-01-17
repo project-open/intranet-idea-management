@@ -18,6 +18,7 @@ ad_page_contract {
     { start_idx:integer 0 }
     { how_many "" }
     { view_name "idea_management_list" }
+    { idea_search "" }
 }
 
 # ---------------------------------------------------------------
@@ -101,6 +102,9 @@ set thumbs_up_pale_24 [im_gif "thumbs_up.pale.24"]
 set thumbs_down_pale_24 [im_gif "thumbs_down.pale.24"]
 set thumbs_up_pressed_24 [im_gif "thumbs_up.pressed.24"]
 set thumbs_down_pressed_24 [im_gif "thumbs_down.pressed.24"]
+
+regexp {src=\"([a-z0-9A-Z_\./]*)\"} $thumbs_up_pale_24 match thumbs_up_pale_24_gif
+regexp {src=\"([a-z0-9A-Z_\./]*)\"} $thumbs_up_pressed_24 match thumbs_up_pressed_24_gif
 
 
 # ---------------------------------------------------------------
