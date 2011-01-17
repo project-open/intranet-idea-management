@@ -35,7 +35,7 @@ set max_description_len 200
 set idea_ticket_type [ad_parameter -package_id [im_package_idea_management_id] IdeaTicketType  "" "Idea"]
 set idea_ticket_type_id [im_id_from_category $idea_ticket_type "Intranet Ticket Type"]
 
-set idea_ticket_type_id 10000077
+set idea_ticket_type_id [im_ticket_type_idea]
 
 set user_is_admin_p [im_is_user_site_wide_or_intranet_admin $current_user_id]
 set return_url [im_url_with_query]
@@ -59,6 +59,7 @@ set ideas_sql "
 		ium.*,
 		o.creation_user,
 		u.username,
+		coalesce(t.ticket_thumbs_up_count, 0) as thumbs_up_count,
 		(select count(*)-1 from im_forum_topics ft where ft.object_id = t.ticket_id) as comment_count
 	from	im_tickets t
 		LEFT OUTER JOIN im_idea_user_map ium ON (ium.ticket_id = t.ticket_id and ium.user_id = :current_user_id),
@@ -80,7 +81,7 @@ set ideas_sql "
 
 db_multirow -extend {idea_url idea_description thumbs_down_url thumbs_up_url thumbs_undo_url ticket_status ticket_type creator_url creator_name} ideas ideas_query $ideas_sql {
 
-    set idea_url [export_vars -base "/intranet-helpdesk/new" {return_url ticket_id {form_mode display}}]
+    set idea_url [export_vars -base "/intranet-helpdesk/new" {return_url {ticket_id $idea_id} {form_mode display}}]
     set idea_description [ns_quotehtml [string range $ticket_description 0 $max_description_len]]
     if {[string length $idea_description] >= $max_description_len} { append idea_description "... (<a href=''>more</a>)" }
 
@@ -88,11 +89,16 @@ db_multirow -extend {idea_url idea_description thumbs_down_url thumbs_up_url thu
     if {[regexp {^([a-z0-9A-Z\-_]*)@} $creator_name match username_body]} { set creator_name $username_body }
     set creator_url [export_vars -base "/intranet/users/view" {{user_id $creation_user}}]
 
+    set ticket_status [im_category_from_id -translate_p 1 $ticket_status_id]
     set ticket_type [im_category_from_id -translate_p 1 $ticket_type_id]
 
     set thumbs_up_url [export_vars -base "/intranet-idea-management/thumbs-action" {return_url {ticket_id $idea_id} {direction up}}]
     set thumbs_down_url [export_vars -base "/intranet-idea-management/thumbs-action" {return_url {ticket_id $idea_id} {direction down}}]
-    set thumbs_undo_url [export_vars -base "/intranet-idea-management/thumbs-action" {return_url {ticket_id $idea_id} {direction ""}}]
+    set thumbs_undo_url [export_vars -base "/intranet-idea-management/thumbs-action" {return_url {ticket_id $idea_id} {direction undo}}]
+
+
+#    if {"SVN Import" == $project_name} { ad_return_complaint 1 "<pre>idea_id=$idea_id\ncomment_count=$comment_count</pre>" }
+
 }
 
 
@@ -113,6 +119,7 @@ regexp {src=\"([a-z0-9A-Z_\./]*)\"} $thumbs_up_pressed_24 match thumbs_up_presse
 
 set thumbed_tickets_sql "
 	select	t.*,
+		t.ticket_id as idea_id,
 		p.*,
 		ium.*
 	from	im_tickets t,
@@ -136,8 +143,9 @@ set thumbed_tickets_sql "
 set max_thumbs_count 10
 set thumb_count 0
 db_multirow -extend {idea_url thumbs_undo_url ticket_status} thumbed_tickets thumbed_tickets_query $thumbed_tickets_sql {
+
     set idea_url [export_vars -base "/intranet-helpdesk/new" {return_url ticket_id {form_mode display}}]
-    set thumbs_undo_url [export_vars -base "/intranet-idea-management/thumbs-action" {return_url {ticket_id $idea_id} {direction ""}}]
+    set thumbs_undo_url [export_vars -base "/intranet-idea-management/thumbs-action" {return_url {ticket_id $idea_id} {direction "undo"}}]
 
     set ticket_status [im_category_from_id -translate_p 1 $ticket_status_id]
     incr thumb_count
@@ -146,6 +154,21 @@ db_multirow -extend {idea_url thumbs_undo_url ticket_status} thumbed_tickets thu
 
 set remaining_thumbs [expr $max_thumbs_count - $thumb_count]
 
+
+
+
+# ---------------------------------------------------------------
+# Count how many surveys the user has filled out
+# ---------------------------------------------------------------
+
+set survey_count [db_string survey_count "
+	select	count(*)
+	from	survsimp_responses sr,
+		acs_objects o
+	where	sr.response_id = o.object_id and
+		o.creation_user = :current_user_id and
+		survey_id in (438275, 438249, 305439)
+"]
 
 # ---------------------------------------------------------------
 # Sub-Navbar

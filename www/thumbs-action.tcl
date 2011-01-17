@@ -15,14 +15,20 @@ ad_page_contract {
     return_url
 }
 
+# ad_return_complaint 1 "$ticket_id $direction"
+
 set current_user_id [ad_maybe_redirect_for_registration]
 set max_thumbs_count 10
-
+if {"undo" == $direction} { set direction "" }
 
 set thumb_count [db_string thumb_count "
 	select	count(*)
-	from	im_idea_user_map ium
-	where	user_id = :current_user_id
+	from	im_tickets t,
+		im_idea_user_map ium
+	where	ium.ticket_id = t.ticket_id and
+		ium.user_id = :current_user_id and
+		ium.thumbs_direction = 'up' and
+		t.ticket_status_id not in ([join [im_sub_categories [im_ticket_status_closed]] ","])
 "]
 
 if {$thumb_count >= $max_thumbs_count && "" != $direction} {
