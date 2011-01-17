@@ -83,7 +83,7 @@ db_multirow -extend {idea_url idea_description thumbs_down_url thumbs_up_url thu
 
     set idea_url [export_vars -base "/intranet-helpdesk/new" {return_url {ticket_id $idea_id} {form_mode display}}]
     set idea_description [ns_quotehtml [string range $ticket_description 0 $max_description_len]]
-    if {[string length $idea_description] >= $max_description_len} { append idea_description "... (<a href=''>more</a>)" }
+    if {[string length $idea_description] >= $max_description_len} { append idea_description "... (<a href='$idea_url'>more</a>)" }
 
     set creator_name $username
     if {[regexp {^([a-z0-9A-Z\-_]*)@} $creator_name match username_body]} { set creator_name $username_body }
