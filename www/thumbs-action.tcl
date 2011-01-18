@@ -15,8 +15,6 @@ ad_page_contract {
     return_url
 }
 
-# ad_return_complaint 1 "$ticket_id $direction"
-
 set current_user_id [ad_maybe_redirect_for_registration]
 set max_thumbs_count 10
 if {"undo" == $direction} { set direction "" }

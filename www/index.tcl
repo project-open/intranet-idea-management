@@ -26,7 +26,7 @@ ad_page_contract {
 # Defaults & Security
 # ---------------------------------------------------------------
 
-set current_user_id [ad_maybe_redirect_for_registration]
+set current_user_id [ad_get_user_id]
 set page_title [lang::message::lookup "" intranet-idea-management.Idea_Management "Idea Management"]
 set context_bar [im_context_bar $page_title]
 set page_focus "im_header_form.keywords"
@@ -47,6 +47,12 @@ set edit_ideas_all_p 1
 # Security: Unprivileged users can only see ideas
 if {!$view_ideas_all_p && !$user_is_admin_p} { set ticket_type_id $idea_ticket_type_id }
 
+# Parameter passing from XoWiki includelet:
+# Allow the includelet to disable the "master" on this page.
+if {![info exists show_template_p]} { set show_template_p 1 }
+
+
+set ticket_bulk_actions_p $user_is_admin_p
 
 # ---------------------------------------------------------------
 # Perspectives

@@ -1,8 +1,10 @@
+
+<if @show_template_p@>
 <master>
 <property name="title">@page_title@</property>
 <property name="context_bar">@context_bar@</property>
 <property name="sub_navbar">@idea_navbar_html;noquote@</property>
-
+</if>
 
 <script type="text/javascript">
 Thumbs_up_pale = new Image();
@@ -15,14 +17,18 @@ function thumbs_change (name, object) {
 }
 </script>
 
+<if @show_template_p@>
 <table>
 <tr valign=top>
 <td width="60%">
+</if>
 
 	<h1>@page_title@</h1>
+        <p>#intranet-idea-management.Description_of_activities#</p>
 	
 	<form method=post action="/intranet-helpdesk/action">
 	<%= [export_form_vars {return_url} ] %>
+
 	
 	<table class="list">
 	
@@ -39,7 +45,6 @@ function thumbs_change (name, object) {
 	<multiple name=ideas>
 	    <if @ideas.rownum@ odd><tr class="list-odd" valign=top></if> 
 	    <else><tr class="list-even" valign=top></else>
-	    <!-- ------------------- Start one element ---------------------------- -->
 	
 		<if @user_is_admin_p@>
 		<td class="list-narrow">
@@ -48,9 +53,8 @@ function thumbs_change (name, object) {
 		</if>
 	
 		<td align=center>
-			<!-- Thumb Count -->
 			<div style="width: 50px; height: 35px;	border: solid 1px #ccc; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; text-align: center">
-			<div style="color: #333; margin-bottom: -0.3em; letter-spacing: -1px; font-weight: bold; font-size: 200%">
+			<div style="color: #333; margin-bottom: -0.1em; letter-spacing: -1px; font-weight: bold; font-size: 200%">
 			<if "" ne @ideas.thumbs_up_count@>
 			@ideas.thumbs_up_count@
 			</div>
@@ -59,7 +63,6 @@ function thumbs_change (name, object) {
 			</div>
 			</if>
 	
-			<!-- Thumb to vote for this idea -->
 			<if "up" eq @ideas.thumbs_direction@>
 			<a href="@ideas.thumbs_undo_url;noquote@" onmouseover="thumbs_change('thumbs_@ideas.rownum@', Thumbs_up_pale)" onmouseout="thumbs_change('thumbs_@ideas.rownum@', Thumbs_up_pressed)">
 				<img src="@thumbs_up_pressed_24_gif;noquote@" name="thumbs_@ideas.rownum@" title="#intranet-idea-management.Press_here_to_redraw_your_vote_for_this_idea#"></a><br>
@@ -72,8 +75,6 @@ function thumbs_change (name, object) {
 		</td>
 	
 		<td class="list-narrow">
-			@ideas.thumbs_up_count_in_last_month@
-			@ideas.creation_date@
 			<a href="@ideas.idea_url;noquote@">@ideas.project_name@</a>
 			<br>
 			@ideas.idea_description;noquote@
@@ -92,11 +93,11 @@ function thumbs_change (name, object) {
 	
 		</td>
 	
-	    <!-- ------------------- End of one element ---------------------------- -->
 	    </tr>
 	</multiple>
 
 
+<if @ticket_bulk_actions_p@>
 	<tfoot>
 	<tr valign=top>
 	  <td align=left colspan=3 valign=top>
@@ -114,14 +115,16 @@ function thumbs_change (name, object) {
 	  </td>
 	</tr>
 	</tfoot>
-
+</if>
 
 	</table>
 	</form>
 
 
+<if @show_template_p@>
 </td>
 <td align=left width="40%">
+</if>
 
 	<h1><%= [lang::message::lookup "" intranet-idea-management.Your_Votes "Your Votes"] %></h1>
 	<if @thumb_count@>
@@ -163,7 +166,6 @@ function thumbs_change (name, object) {
 
 	</if>
 	<else>
-	<!-- The user hasn't yet voted for any item -->
 		<p>
 		<font color=red>
 		Please click on the @thumbs_up_pale_24;noquote@ icons on the left<br>
@@ -217,9 +219,12 @@ function thumbs_change (name, object) {
 	</table>
 	</form>
 
+
+<if @show_template_p@>
 </td>
 </tr>
 </table>
+</if>
 
 
 
