@@ -65,11 +65,11 @@ function thumbs_change (name, object) {
 	
 			<if "up" eq @ideas.thumbs_direction@>
 			<a href="@ideas.thumbs_undo_url;noquote@" onmouseover="thumbs_change('thumbs_@ideas.rownum@', Thumbs_up_pale)" onmouseout="thumbs_change('thumbs_@ideas.rownum@', Thumbs_up_pressed)">
-				<img src="@thumbs_up_pressed_24_gif;noquote@" name="thumbs_@ideas.rownum@" title="#intranet-idea-management.Press_here_to_redraw_your_vote_for_this_idea#"></a><br>
+				<img src="@thumbs_up_pressed_24_gif;noquote@" name="thumbs_@ideas.rownum@" title="#intranet-idea-management.Press_here_to_redraw_your_vote_for_this_idea#" border='0' style='margin-top:3px'></a><br>
 			</if>
 			<else>
 			<a href="@ideas.thumbs_up_url;noquote@" onmouseover="thumbs_change('thumbs_@ideas.rownum@', Thumbs_up_pressed)" onmouseout="thumbs_change('thumbs_@ideas.rownum@', Thumbs_up_pale)">
-				<img src="@thumbs_up_pale_24_gif;noquote@" name="thumbs_@ideas.rownum@" title="#intranet-idea-management.Press_here_to_vote_for_this_idea#"></a><br>
+				<img src="@thumbs_up_pale_24_gif;noquote@" name="thumbs_@ideas.rownum@" title="#intranet-idea-management.Press_here_to_vote_for_this_idea#" border='0' style='margin-top:3px'></a><br>
 			</else>
 	
 		</td>
