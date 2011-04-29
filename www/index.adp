@@ -81,18 +81,26 @@ function thumbs_change (name, object) {
 			<br>
 			#intranet-idea-management.From#: <a href="@ideas.creator_url;noquote@">@ideas.creator_name@</a>
 			|
-			<if @ideas.comment_count@>
-			@comment_gif;noquote@ @ideas.comment_count@ 
+			<a href="@ideas.idea_url;noquote@">
+			@ideas.comment_count@ 
 			<if @ideas.comment_count@ eq 1>#intranet-idea-management.Comment#</if>
-			<else>#intranet-idea-management.Comments#</else>
+			<else>#intranet-idea-management.Comments#</else></a>
 			| 
+			<if @ideas.comment_count@>
 			</if>
 			#intranet-idea-management.Status#: @ideas.ticket_status@
 			|
 			#intranet-idea-management.Type#: @ideas.ticket_type@
+			|
+			<a href="@ideas.comments_url;noquote@"
+			><%= [im_gif comments [lang::message::lookup "" intranet-idea-management.Comment_on_idea "Comment on idea"]] 
+			%></a>
+			|
+			<a href="@ideas.dollar_url;noquote@"
+			><%= [im_gif money_dollar [lang::message::lookup "" intranet-idea-management.Share_development_costs "Share development costs"]] 
+			%></a>
 	
 		</td>
-	
 	    </tr>
 	</multiple>
 

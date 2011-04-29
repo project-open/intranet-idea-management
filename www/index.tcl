@@ -88,7 +88,8 @@ set ideas_sql "
 		u.username,
 		coalesce(t.ticket_thumbs_up_count, 0) as thumbs_up_count,
 		(select count(*) from im_idea_user_map m where thumbs_direction='up' and last_modified > now()::date -30) as thumbs_up_count_in_last_month,
-		(select count(*)-1 from im_forum_topics ft where ft.object_id = t.ticket_id) as comment_count
+		(select count(*)-1 from im_forum_topics ft where ft.object_id = t.ticket_id) as comment_count,
+		(select min(topic_id) from im_forum_topics ft2 where ft2.object_id = t.ticket_id and ft2.parent_id is null) as forum_topic_id
 	from	im_tickets t
 		LEFT OUTER JOIN im_idea_user_map ium ON (ium.ticket_id = t.ticket_id and ium.user_id = :current_user_id),
 		im_projects p,
@@ -107,9 +108,13 @@ set ideas_sql "
 # Create the main ideas multirow
 # ---------------------------------------------------------------
 
-db_multirow -extend {idea_url idea_description thumbs_down_url thumbs_up_url thumbs_undo_url ticket_status ticket_type creator_url creator_name} ideas ideas_query $ideas_sql {
+db_multirow -extend {idea_url idea_description thumbs_down_url thumbs_up_url thumbs_undo_url dollar_url comments_url ticket_status ticket_type creator_url creator_name} ideas ideas_query $ideas_sql {
 
-    set idea_url [export_vars -base "/intranet-helpdesk/new" {return_url {ticket_id $idea_id} {form_mode display}}]
+#    set idea_url [export_vars -base "/intranet-helpdesk/new" {return_url {ticket_id $idea_id} {form_mode display}}]
+    set idea_url [export_vars -base "/intranet-idea-management/redirect-to-ticket" {{ticket_id $idea_id} return_url}]
+    set dollar_url [export_vars -base "/intranet-idea-management/dollar-action" {return_url ticket_id}]
+    set comments_url [export_vars -base "/intranet-forum/new" {return_url {parent_id $forum_topic_id}}]
+
     set idea_description [ns_quotehtml [string range $ticket_description 0 $max_description_len]]
     if {[string length $idea_description] >= $max_description_len} { append idea_description "... (<a href='$idea_url'>more</a>)" }
 
