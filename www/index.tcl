@@ -13,7 +13,7 @@ ad_page_contract {
     { order_by "Points" }
     { mine_p "all" }
     { ticket_status_id:integer "[im_ticket_status_open]" }
-    { ticket_type_id:integer 0 }
+    { ticket_type_id:integer "[im_ticket_type_idea]" }
     { letter:trim "" }
     { start_idx:integer 0 }
     { how_many "" }
@@ -33,10 +33,6 @@ set page_focus "im_header_form.keywords"
 set letter [string toupper $letter]
 set max_description_len 200
 
-set idea_ticket_type [ad_parameter -package_id [im_package_idea_management_id] IdeaTicketType  "" "Idea"]
-set idea_ticket_type_id [im_id_from_category $idea_ticket_type "Intranet Ticket Type"]
-
-set idea_ticket_type_id [im_ticket_type_idea]
 
 set user_is_admin_p [im_is_user_site_wide_or_intranet_admin $current_user_id]
 set return_url [im_url_with_query]
@@ -45,6 +41,7 @@ set view_ideas_all_p 1
 set edit_ideas_all_p 1
 
 # Security: Unprivileged users can only see ideas
+set idea_ticket_type_id [im_ticket_type_idea]
 if {!$view_ideas_all_p && !$user_is_admin_p} { set ticket_type_id $idea_ticket_type_id }
 
 # Parameter passing from XoWiki includelet:
@@ -97,7 +94,8 @@ set ideas_sql "
 		LEFT OUTER JOIN users u ON (o.creation_user = u.user_id)
 	where	t.ticket_id = p.project_id and
 		p.project_id = o.object_id and
-		t.ticket_type_id in ([join [im_sub_categories $idea_ticket_type_id] ","])
+		t.ticket_type_id in ([join [im_sub_categories $idea_ticket_type_id] ","]) and
+		t.ticket_status_id in ([join [im_sub_categories $ticket_status_id] ","])
 	order by
 		$order_by_clause,
 		t.ticket_prio_id
