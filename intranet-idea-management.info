@@ -8,7 +8,7 @@
     <singleton-p>t</singleton-p>
     <auto-mount>intranet-idea-management</auto-mount>
 
-    <version name="4.0.3.0.0" url="http://www.project-open.org/download/apm/intranet-idea-management-4.0.3.0.0.apm">
+    <version name="4.0.3.1.0" url="http://www.project-open.org/download/apm/intranet-idea-management-4.0.3.1.0.apm">
         <owner url="mailto:frank.bergmann@project-open.com">Frank Bergmann</owner>
         <summary>Allows employees and other stakeholders to propose and rate ideas.</summary>
         <vendor url="http://www.project-open.com/">]project-open[</vendor>
