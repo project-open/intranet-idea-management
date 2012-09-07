@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <message_catalog package_key="intranet-idea-management" locale="en_US" charset="ISO-8859-1">
 
+  <msg key="Catchy_phrase_for_your_idea">Catchy title for your idea</msg>
   <msg key="Comment">Comment</msg>
   <msg key="Comments">Comments</msg>
+  <msg key="Description">Description</msg>
+  <msg key="Description_of_activities">In this page you can &quot;vote&quot; for a number of product development and documentation ideas. &lt;br&gt;
+You may also let us know if you think that we missed an important idea.</msg>
+  <msg key="Filling_out_the_survey_will_increase_the_weight_of_your_votes">Filling out the survey will increase the weight of your votes</msg>
   <msg key="From">From</msg>
-  <msg key="Idea_Management">Idea Management</msg>
+  <msg key="Idea_Management">]po[ Product Development and Documentation Pipeline</msg>
+  <msg key="Increase_the_Weight_of_your_Votes">Increase the Weight of your Votes</msg>
   <msg key="Name">Name</msg>
+  <msg key="One_or_two_paragraphs_to_describe_your_idea">One or two paragraphs to describe your idea.</msg>
+  <msg key="Please_check_for_duplicate_ideas">Please check for duplicate ideas before you submit a new one. Joining an existing idea will increase your chances to win.</msg>
+  <msg key="Press_here_to_redraw_your_vote_for_this_idea">Press here to redraw your vote for this idea</msg>
+  <msg key="Press_here_to_vote_for_this_idea">Press here to vote for this idea</msg>
   <msg key="Search">Search</msg>
   <msg key="Status">Status</msg>
+  <msg key="Submit">Submit</msg>
   <msg key="Thumb">Thumb</msg>
   <msg key="Thumbs">Thumbs</msg>
+  <msg key="Title">Title</msg>
+  <msg key="Type">Type</msg>
   <msg key="User_Information">User Information</msg>
+  <msg key="Votes">Votes</msg>
+  <msg key="You_havent_yet_filled_our_one_of_the_following_surveys">You haven't yet filled out one of the following surveys</msg>
+  <msg key="Your_Voted_Items">Your Voted Items</msg>
+  <msg key="Your_Votes">Your Votes</msg>
 </message_catalog>
