@@ -89,7 +89,7 @@ notification::new \
     -notif_text $idea_description
 
 # Write Audit Trail
-im_project_audit -project_id $ticket_id -action create
+im_project_audit -project_id $ticket_id -action after_create
 
 
 ad_returnredirect $return_url
