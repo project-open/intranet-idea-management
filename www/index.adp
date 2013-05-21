@@ -184,27 +184,6 @@ function thumbs_change (name, object) {
 
 	<br>&nbsp;<br>
 
-
-	<if @survey_count@></if>
-	<else>
-	<h1>#intranet-idea-management.Increase_the_Weight_of_your_Votes#</h1>
-	#intranet-idea-management.You_havent_yet_filled_our_one_of_the_following_surveys#.<br>
-	#intranet-idea-management.Filling_out_the_survey_will_increase_the_weight_of_your_votes#:<br>
-	&nbsp;
-
-	<ul>
-	<li>Are you a potential ]po[ user?<br>
-		Then please take the <a href="/simple-survey/one?return_url=&survey_id=438275">Potential User Feedback</a>
-		<br>&nbsp;
-	<li>Are you a productive ]po[ user?<br>
-		Then please take the <a href="/simple-survey/one?return_url=&survey_id=438249">Productive User Feedback</a>
-		<br>&nbsp;
-	<li>Are you a ]po[ partner? <br>
-		Then please take the <a href="/simple-survey/one?return_url=&survey_id=305439">Partner Survey</a>.
-		<br>&nbsp;
-	</ul>
-	</else>
-
 	<h1>Create a new Idea</h1>
 	<p>
 	#intranet-idea-management.Please_check_for_duplicate_ideas#

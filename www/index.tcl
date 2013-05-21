@@ -186,21 +186,6 @@ db_multirow -extend {idea_url thumbs_undo_url ticket_status} thumbed_tickets thu
 set remaining_thumbs [expr $max_thumbs_count - $thumb_count]
 
 
-
-
-# ---------------------------------------------------------------
-# Count how many surveys the user has filled out
-# ---------------------------------------------------------------
-
-set survey_count [db_string survey_count "
-	select	count(*)
-	from	survsimp_responses sr,
-		acs_objects o
-	where	sr.response_id = o.object_id and
-		o.creation_user = :current_user_id and
-		survey_id in (438275, 438249, 305439)
-"]
-
 # ---------------------------------------------------------------
 # Sub-Navbar
 # ---------------------------------------------------------------
