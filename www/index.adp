@@ -166,18 +166,18 @@ function thumbs_change (name, object) {
 		</table>
 
 		<if @remaining_thumbs@ gt 0>
-			You have still @remaining_thumbs@ votes left to distribute.
+			<%= [lang::message::lookup "" intranet-idea-management.You_have_still_thumbs "You have still @remaining_thumbs@ votes left to distribute."] %>
 		</if>
 		<else>
-			All of your @max_thumbs_count@ votes have been distributed.
+			<%= [lang::message::lookup "" intranet-idea-management.All_of_your_votes_have_been_distributed "All of your @max_thumbs_count@ votes have been distributed."] %>
 		</else>
 
 	</if>
 	<else>
 		<p>
 		<font color=red>
-		Please click on the @thumbs_up_pale_24;noquote@ icons on the left<br>
-		hand side in order to vote for your ideas.
+		<%= [lang::message::lookup "" intranet-idea-management.Please_click "Please click on the %thumbs_up_pale_24% icons on the left<br>
+		hand side in order to vote for your ideas."] %>
 		</font>
 		</p>
 	</else>
