@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<message_catalog package_key="intranet-idea-management" locale="de_DE" charset="ISO-8859-1">
+
+  <msg key="Catchy_phrase_for_your_idea">Spechender Titel für die Idee</msg>
+  <msg key="Comment">Kommentar</msg>
+  <msg key="Comments">Kommentare</msg>
+  <msg key="Description">Beschreibung</msg>
+  <msg key="Description_of_activities">Auf dieser Seite können Sie über Ideen abstimmen.&lt;br&gt;
+Sie können auch neue Ideen erzeugen, wenn Sie glauben dass etwas Wichtiges fehlt.</msg>
+  <msg key="Filling_out_the_survey_will_increase_the_weight_of_your_votes">Sie können das Gewicht Ihrer Stimmen erhöhen, wenn Sie die Umfrage ausfüllen.</msg>
+  <msg key="From">Von</msg>
+  <msg key="Idea_Management">Ideenverwaltung</msg>
+  <msg key="Increase_the_Weight_of_your_Votes">Das Gewicht Ihrer Stimmen erhöhen</msg>
+  <msg key="Name">Name</msg>
+  <msg key="One_or_two_paragraphs_to_describe_your_idea">Ihre Idee in ein oder zwei Absätzen</msg>
+  <msg key="Please_check_for_duplicate_ideas">Bitte prüfen Sie, ob es bereits ähnliche Ideen im System gibt. Das unterstützen bestehender Ideen erhöht die Chancen für Erfolg.</msg>
+  <msg key="Press_here_to_redraw_your_vote_for_this_idea">Stimme zurückziehen</msg>
+  <msg key="Press_here_to_vote_for_this_idea">Hier für die Idee stimmen</msg>
+  <msg key="Search">Suchen</msg>
+  <msg key="Status">Status</msg>
+  <msg key="Submit">Bestätigen</msg>
+  <msg key="Thumb">Daumen</msg>
+  <msg key="Thumbs">Daumen</msg>
+  <msg key="Title">Titel</msg>
+  <msg key="Type">Typ</msg>
+  <msg key="User_Information">Benutzerinformationen</msg>
+  <msg key="Votes">Stimmen</msg>
+  <msg key="You_havent_yet_filled_our_one_of_the_following_surveys">Sie haben noch keine der folgenen Umfragen ausgefüllt</msg>
+  <msg key="Your_Voted_Items">Ideen, für die Sie gestimmt haben</msg>
+  <msg key="Your_Votes">Ihre vergebenen Stimmen</msg>
+</message_catalog>
