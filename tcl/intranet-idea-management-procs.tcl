@@ -24,7 +24,7 @@ ad_proc -public im_idea_ticket_type_id {} { return 72000 }
 ad_proc -public im_package_idea_management_id {} {
     Returns the package id of the intranet-idea-management module
 } {
-    return [util_memoize "im_package_idea_management_id_helper"]
+    return [util_memoize im_package_idea_management_id_helper]
 }
 
 ad_proc -private im_package_idea_management_id_helper {} {
