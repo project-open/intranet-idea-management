@@ -15,7 +15,9 @@
         <description format="text/plain">Provides a page that allows users to propose new ideas and to vote for existing ideas. Ideas are represented as &quot;tickets&quot;, allowing companies to build workflows around ideas and to use them as input to project management processes.</description>
         <maturity>0</maturity>
 
-        <provides url="intranet-idea-management" version="0.1d"/>
+        <provides url="intranet-idea-management" version="4.1.0.0.0"/>
+        <requires url="intranet-helpdesk" version="4.0.0.0.0"/>
+        <requires url="intranet-core" version="3.4.0.0.0"/>
 
         <callbacks>
         </callbacks>
