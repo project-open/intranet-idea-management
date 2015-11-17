@@ -81,7 +81,7 @@ ad_proc -public im_idea_navbar {
 		       search shortcuts, defaults to "projects".
 } {
     # -------- Defaults -----------------------------
-    set user_id [ad_get_user_id]
+    set user_id [ad_conn user_id]
     set url_stub [ns_urldecode [im_url_with_query]]
 
     set sel "<td class=tabsel>"

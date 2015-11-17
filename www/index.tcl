@@ -26,7 +26,7 @@ ad_page_contract {
 # Defaults & Security
 # ---------------------------------------------------------------
 
-set current_user_id [ad_get_user_id]
+set current_user_id [ad_conn user_id]
 set page_title [lang::message::lookup "" intranet-idea-management.Idea_Management "Idea Management"]
 set context_bar [im_context_bar $page_title]
 set page_focus "im_header_form.keywords"

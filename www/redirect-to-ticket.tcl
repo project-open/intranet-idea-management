@@ -21,7 +21,7 @@ ad_page_contract {
 # Default & Security
 # ---------------------------------------------------------------
 
-set current_user_id [ad_get_user_id]
+set current_user_id [ad_conn user_id]
 
 set ticket_type_id [db_string ttype "
 	select	ticket_type_id
