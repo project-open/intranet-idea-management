@@ -27,7 +27,7 @@ function thumbs_change (name, object) {
         <p>#intranet-idea-management.Description_of_activities#</p>
 	
 	<form method=post action="/intranet-helpdesk/action">
-	<%= [export_form_vars {return_url} ] %>
+	<%= [export_vars -form {return_url}] %>
 
 	
 	<table class="list">
@@ -189,7 +189,7 @@ function thumbs_change (name, object) {
 	#intranet-idea-management.Please_check_for_duplicate_ideas#
 	</p>
 	<form action="/intranet-idea-management/idea-new" method=POST>
-	<%= [export_form_vars return_url] %>
+	<%= [export_vars -form {return_url}] %>
 	<table width="100%">
 	<tr class=rowodd>
 	<td>#intranet-idea-management.Title#:</td>

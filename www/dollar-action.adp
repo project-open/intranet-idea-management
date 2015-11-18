@@ -15,7 +15,7 @@ implementation.<br>
 
 <br>&nbsp;<br>
 <form action="/intranet-idea-management/dollar-action-2" method=POST>
-<%= [export_form_vars ticket_id return_url] %>
+<%= [export_vars -form {ticket_id return_url}] %>
 <table>
 <tr>
   <td><%= [lang::message::lookup "" intranet-idea-management.I_would_offer "I would offer:"] %></td>
