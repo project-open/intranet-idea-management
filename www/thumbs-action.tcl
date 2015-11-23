@@ -15,7 +15,7 @@ ad_page_contract {
     return_url
 }
 
-set current_user_id [ad_maybe_redirect_for_registration]
+set current_user_id [auth::require_login]
 set max_thumbs_count 10
 if {"undo" == $direction} { set direction "" }
 

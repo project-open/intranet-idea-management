@@ -183,7 +183,7 @@ db_multirow -extend {idea_url thumbs_undo_url ticket_status} thumbed_tickets thu
 }
 
 
-set remaining_thumbs [expr $max_thumbs_count - $thumb_count]
+set remaining_thumbs [expr {$max_thumbs_count - $thumb_count}]
 
 
 # ---------------------------------------------------------------

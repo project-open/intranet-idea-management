@@ -1,6 +1,6 @@
 <master>
-<property name="title">@page_title@</property>
-<property name="context_bar">@context_bar@</property>
+<property name="doc(title)">@page_title;literal@</property>
+<property name="context_bar">@context_bar;literal@</property>
 
 <h1>@page_title@</h1>
 <p>
@@ -19,12 +19,12 @@ implementation.<br>
 <table>
 <tr>
   <td><%= [lang::message::lookup "" intranet-idea-management.I_would_offer "I would offer:"] %></td>
-  <td><input type=text name=amount size=5></td>
+  <td><input type="text" name="amount" size="5"></td>
   <td><%= [im_parameter -package_id [im_package_cost_id] "DefaultCurrency" "" "EUR"] %></td>
 </tr>
 <tr>
   <td></td>
-  <td colspan=2><input type=submit></td>
+  <td colspan="2"><input type="submit"></td>
 </tr>
 </table>
 </form>
