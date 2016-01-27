@@ -86,7 +86,7 @@ function thumbs_change (name, object) {
 			<if @ideas.comment_count@ eq 1>#intranet-idea-management.Comment#</if>
 			<else>#intranet-idea-management.Comments#</else></a>
 			| 
-			<if @ideas.comment_count@>
+			<if @ideas.comment_count@ gt 0>
 			</if>
 			#intranet-idea-management.Status#: @ideas.ticket_status@
 			|
@@ -135,7 +135,7 @@ function thumbs_change (name, object) {
 </if>
 
 	<h1><%= [lang::message::lookup "" intranet-idea-management.Your_Votes "Your Votes"] %></h1>
-	<if @thumb_count@>
+	<if @thumb_count@ gt 0>
 
 		<table class="list" width="100%">
 		    <tr class="list-header">
