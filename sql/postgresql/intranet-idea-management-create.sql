@@ -401,7 +401,7 @@ SELECT im_dynfield_widget__new (
 -- Hard Coded DynFields
 --
 SELECT im_dynfield_attribute_new (
-	'im_ticket', 'xxx_name', 'Name', 'textbox_medium', 'string', 'f', 0, 't', 'im_projects'
+	'im_ticket', 'name', 'Name', 'textbox_medium', 'string', 'f', 0, 't', 'im_projects'
 );
 SELECT im_dynfield_attribute_new (
 	'im_idea', 'parent_id', 'Service Level Agreement', 'service_level_agreements', 
