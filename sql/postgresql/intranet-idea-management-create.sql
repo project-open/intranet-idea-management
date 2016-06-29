@@ -377,7 +377,7 @@ order by
 
 SELECT im_dynfield_widget__new (
 	null, 'im_dynfield_widget', now(), 0, '0.0.0.0', null,
-	'service_level_agreements', 'Service Level Agreements', 'Service Level Agreements',
+	'service_level_agreements', 'Ticket Containers', 'Ticket Containers',
 	10007, 'integer', 'generic_sql', 'integer',
 	'{custom {sql {
 		select	
@@ -404,7 +404,7 @@ SELECT im_dynfield_attribute_new (
 	'im_ticket', 'name', 'Name', 'textbox_medium', 'string', 'f', 0, 't', 'im_projects'
 );
 SELECT im_dynfield_attribute_new (
-	'im_idea', 'parent_id', 'Service Level Agreement', 'service_level_agreements', 
+	'im_idea', 'parent_id', 'Ticket Container', 'service_level_agreements', 
 	'integer', 'f', 10, 't', 'im_projects'
 );
 SELECT im_dynfield_attribute_new (

@@ -46,8 +46,8 @@ ad_proc -public im_idea_component {
     to add more parameters
 } {
     set project_id $object_id
-    if {![im_project_has_type $project_id "Service Level Agreement"]} { 
-	ns_log Notice "im_idea_parameter_component: Project \#$project_id is not a 'Service Level Agreement'"
+    if {![im_project_has_type $project_id [im_project_type_ticket_container]]} { 
+	ns_log Notice "im_idea_parameter_component: Project \#$project_id is not a 'Ticket Container'"
 	return "" 
     }
 
