@@ -11,6 +11,7 @@
     <version name="5.0.2.0.0" url="http://www.project-open.net/download/apm/intranet-idea-management-5.0.2.0.0.apm">
         <owner url="mailto:frank.bergmann@project-open.com">Frank Bergmann</owner>
         <summary>Allows employees and other stakeholders to propose and rate ideas.</summary>
+        <release-date>2016-11-15</release-date>
         <vendor url="http://www.project-open.com/">]project-open[</vendor>
         <description format="text/plain">Provides a page that allows users to propose new ideas and to vote for existing ideas. Ideas are represented as &quot;tickets&quot;, allowing companies to build workflows around ideas and to use them as input to project management processes.</description>
         <maturity>0</maturity>
