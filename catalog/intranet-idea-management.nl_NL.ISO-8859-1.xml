@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<message_catalog package_key="intranet-idea-management" locale="nl_NL" charset="ISO-8859-1">
+
+  <msg key="Catchy_phrase_for_your_idea">Pakkende titel voor uw idee</msg>
+  <msg key="Comment">Opmerking</msg>
+  <msg key="Comments">Opmerkingen</msg>
+  <msg key="Description">Omschrijving</msg>
+  <msg key="Description_of_activities">U kunt op deze pagina &#34;stemmen&#34; op een aantal product ontwikkeling en documentatie ideeën.&lt;br&gt;Ook kunt u ons laten weten of wij naar uw mening een belangrijk idee hebben gemist.</msg>
+  <msg key="Filling_out_the_survey_will_increase_the_weight_of_your_votes">Het invullen van de vragenlijst zal het gewicht van uw stem doen toenemen</msg>
+  <msg key="From">Van</msg>
+  <msg key="Idea_Management">Pijplijn ]po[ Productontwikkeling en documentatie</msg>
+  <msg key="Increase_the_Weight_of_your_Votes">Verzwaar het gewicht van uw stem</msg>
+  <msg key="Name">Naam</msg>
+  <msg key="One_or_two_paragraphs_to_describe_your_idea">Een of twee paragrafen om uw idee te beschrijven.</msg>
+  <msg key="Please_check_for_duplicate_ideas">Controleer aub of uw idee al ingediend is om dubbele te voorkomen. Aansluiten bij een bestaand idee zal uw kans op winnen doen toenemen.</msg>
+  <msg key="Press_here_to_redraw_your_vote_for_this_idea">Hier klikken om uw stem op dit idee te herzien</msg>
+  <msg key="Press_here_to_vote_for_this_idea">Hier klikken om te stemmen op dit idee</msg>
+  <msg key="Search">Zoek</msg>
+  <msg key="Status">Status</msg>
+  <msg key="Submit">Indienen</msg>
+  <msg key="Thumb">Like</msg>
+  <msg key="Thumbs">Likes</msg>
+  <msg key="Title">Titel</msg>
+  <msg key="Type">Type</msg>
+  <msg key="User_Information">Gebruikersinformatie</msg>
+  <msg key="Votes">Stemmen</msg>
+  <msg key="You_havent_yet_filled_our_one_of_the_following_surveys">U heeft nog geen van de volgende onderzoeken uitgevoerd</msg>
+  <msg key="Your_Voted_Items">Zaken waarop u heeft gestemd</msg>
+  <msg key="Your_Votes">Uw stem</msg>
+</message_catalog>
