@@ -4,6 +4,7 @@
   <msg key="Accepted">Accepted</msg>
   <msg key="Catchy_phrase_for_your_idea">Catchy title for your idea</msg>
   <msg key="Comment">Comment</msg>
+  <msg key="Comment_on_idea">Comment on idea</msg>
   <msg key="Comments">Comments</msg>
   <msg key="Description">Description</msg>
   <msg key="Description_of_activities">In this page you can &#34;vote&#34; for a number of product development and documentation ideas. &lt;br&gt;
@@ -18,9 +19,12 @@ You may also let us know if you think that we missed an important idea.</msg>
   <msg key="New">New</msg>
   <msg key="One_or_two_paragraphs_to_describe_your_idea">One or two paragraphs to describe your idea.</msg>
   <msg key="Please_check_for_duplicate_ideas">Please check for duplicate ideas before you submit a new one. Joining an existing idea will increase your chances to win.</msg>
+  <msg key="Please_click">Please click on the &lt;img src=&#34;/intranet/images/navbar_default/thumbs_up.pale.24.gif&#34; border=0 title=&#34;&#34; alt=&#34;&#34;&gt; icons on the left&lt;br&gt;
+hand side in order to vote for your ideas.</msg>
   <msg key="Press_here_to_redraw_your_vote_for_this_idea">Press here to redraw your vote for this idea</msg>
   <msg key="Press_here_to_vote_for_this_idea">Press here to vote for this idea</msg>
   <msg key="Search">Search</msg>
+  <msg key="Share_development_costs">Share development costs</msg>
   <msg key="Status">Status</msg>
   <msg key="Submit">Submit</msg>
   <msg key="Thumb">Thumb</msg>
