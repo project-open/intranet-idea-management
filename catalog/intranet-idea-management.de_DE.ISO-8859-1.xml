@@ -4,6 +4,7 @@
   <msg key="Accepted">Akzeptiert</msg>
   <msg key="Catchy_phrase_for_your_idea">Spechender Titel für die Idee</msg>
   <msg key="Comment">Kommentar</msg>
+  <msg key="Comment_on_idea">Idee kommentieren</msg>
   <msg key="Comments">Kommentare</msg>
   <msg key="Description">Beschreibung</msg>
   <msg key="Description_of_activities">Auf dieser Seite können Sie über Ideen abstimmen.&lt;br&gt;
@@ -19,9 +20,15 @@ Sie können auch neue Ideen erzeugen, wenn Sie glauben dass etwas Wichtiges fehlt
   <msg key="New">Neu</msg>
   <msg key="One_or_two_paragraphs_to_describe_your_idea">Ihre Idee in ein oder zwei Absätzen</msg>
   <msg key="Please_check_for_duplicate_ideas">Bitte prüfen Sie, ob es bereits ähnliche Ideen im System gibt. Das unterstützen bestehender Ideen erhöht die Chancen für Erfolg.</msg>
+  <msg key="Please_click">Bitte auf die 
+&lt;img src=&#34;/intranet/images/navbar_default/thumbs_up.pale.24.gif&#34; border=0 title=&#34;&#34; alt=&#34;&#34;&gt; 
+Icons auf der linken Seite klicken, &lt;br&gt;
+um für Ideen zu stimmen.
+</msg>
   <msg key="Press_here_to_redraw_your_vote_for_this_idea">Stimme zurückziehen</msg>
   <msg key="Press_here_to_vote_for_this_idea">Hier für die Idee stimmen</msg>
   <msg key="Search">Suchen</msg>
+  <msg key="Share_development_costs">Entwicklungskosten teilen</msg>
   <msg key="Status">Status</msg>
   <msg key="Submit">Bestätigen</msg>
   <msg key="Thumb">Daumen</msg>
