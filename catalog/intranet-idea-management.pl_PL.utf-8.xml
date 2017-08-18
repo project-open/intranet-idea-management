@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<message_catalog package_key="intranet-idea-management" locale="pl_PL" charset="utf-8">
+
+  <msg key="Catchy_phrase_for_your_idea">Chwytliwy tytuł dla Twojego pomysłu</msg>
+  <msg key="Description">Opis</msg>
+  <msg key="Description_of_activities">Na tej stronie możesz oddać &quot;głos&quot; dla wielu produktów deweloperskich i pomysłów związanych z dokumentacją. &lt;br&gt;
+Możesz również dać nam znać, jeśli uważasz, że zabrakło tu ważnych pomysłów.</msg>
+  <msg key="Filling_out_the_survey_will_increase_the_weight_of_your_votes">Wypełnienie ankiety zwiększy wagę Twojego głosu</msg>
+  <msg key="Idea_Management">]po[ Rozwój Produktu i Dokumentacji Pipeline</msg>
+  <msg key="Increase_the_Weight_of_your_Votes">Zwiększ Wagę Swoich Głosów</msg>
+  <msg key="Name">Nazwa</msg>
+  <msg key="One_or_two_paragraphs_to_describe_your_idea">Jeden lub dwa akapity, aby opisać Twój pomysł.</msg>
+  <msg key="Please_check_for_duplicate_ideas">Proszę sprawdzić duplikaty pomysłów przed wysłaniem nowego. Przyłączenie się do istniejącego pomysłu zwiększy Twoje szanse na zwycięstwo.</msg>
+  <msg key="Submit">Prześlij</msg>
+  <msg key="Title">Tytuł</msg>
+  <msg key="Votes">Głosy</msg>
+  <msg key="You_havent_yet_filled_our_one_of_the_following_surveys">Jeszcze nie wypełniłeś jednej z poniższych ankiet</msg>
+  <msg key="Your_Votes">Twoje Głosy</msg>
+</message_catalog>
