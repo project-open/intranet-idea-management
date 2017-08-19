@@ -184,7 +184,7 @@ function thumbs_change (name, object) {
 
 	<br>&nbsp;<br>
 
-	<h1>Create a new Idea</h1>
+	<h1><%= [lang::message::lookup "" intranet-idea-management.Create_a_new_idea "Create a new Idea"] %></h1>
 	<p>
 	#intranet-idea-management.Please_check_for_duplicate_ideas#
 	</p>
