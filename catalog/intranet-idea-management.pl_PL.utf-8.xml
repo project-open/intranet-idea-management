@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <message_catalog package_key="intranet-idea-management" locale="pl_PL" charset="utf-8">
 
+  <msg key="Accepted">Zaakceptowane</msg>
   <msg key="Catchy_phrase_for_your_idea">Chwytliwy tytuł dla Twojego pomysłu</msg>
+  <msg key="Comment">Komentarz</msg>
+  <msg key="Comment_on_idea">Skomentuj pomysł</msg>
+  <msg key="Comments">komentarzy</msg>
+  <msg key="Create_a_new_idea">Utwórz nowy pomysł</msg>
   <msg key="Description">Opis</msg>
-  <msg key="Description_of_activities">Na tej stronie możesz oddać &quot;głos&quot; dla wielu produktów deweloperskich i pomysłów związanych z dokumentacją. &lt;br&gt;
+  <msg key="Description_of_activities">Na tej stronie możesz oddać &#34;głos&#34; na rozwój wielu produktów  i pomysłów związanych z dokumentacją. &lt;br&gt;
 Możesz również dać nam znać, jeśli uważasz, że zabrakło tu ważnych pomysłów.</msg>
+  <msg key="Done">Zrealizowane</msg>
   <msg key="Filling_out_the_survey_will_increase_the_weight_of_your_votes">Wypełnienie ankiety zwiększy wagę Twojego głosu</msg>
+  <msg key="From">Od</msg>
+  <msg key="Hot">Gorące</msg>
   <msg key="Idea_Management">]po[ Rozwój Produktu i Dokumentacji Pipeline</msg>
   <msg key="Increase_the_Weight_of_your_Votes">Zwiększ Wagę Swoich Głosów</msg>
   <msg key="Name">Nazwa</msg>
+  <msg key="New">Nowe</msg>
   <msg key="One_or_two_paragraphs_to_describe_your_idea">Jeden lub dwa akapity, aby opisać Twój pomysł.</msg>
   <msg key="Please_check_for_duplicate_ideas">Proszę sprawdzić duplikaty pomysłów przed wysłaniem nowego. Przyłączenie się do istniejącego pomysłu zwiększy Twoje szanse na zwycięstwo.</msg>
+  <msg key="Please_click">Kliknij na ikonę &lt;img src=&#34;/intranet/images/navbar_default/thumbs_up.pale.24.gif&#34; border=0 title=&#34;&#34; alt=&#34;&#34;/&gt; po lewej stronie,&lt;br/&gt; żeby zagłosować na swoje pomysły.</msg>
+  <msg key="Press_here_to_redraw_your_vote_for_this_idea">Naciśnij tutaj, żeby zagłosować jeszcze raz</msg>
+  <msg key="Press_here_to_vote_for_this_idea">Kliknij tu, żeby zagłosować na ten pomysł</msg>
+  <msg key="Search">Szukaj</msg>
+  <msg key="Share_development_costs">Współdziel koszty</msg>
+  <msg key="Status">Status</msg>
   <msg key="Submit">Prześlij</msg>
+  <msg key="Thumb">Kciuk w górę</msg>
+  <msg key="Thumbs">Głosy</msg>
   <msg key="Title">Tytuł</msg>
+  <msg key="Top">Najważniejsze</msg>
+  <msg key="Type">Typ</msg>
+  <msg key="User_Information">Informacje o użytkowniku</msg>
   <msg key="Votes">Głosy</msg>
   <msg key="You_havent_yet_filled_our_one_of_the_following_surveys">Jeszcze nie wypełniłeś jednej z poniższych ankiet</msg>
-  <msg key="Your_Votes">Twoje Głosy</msg>
+  <msg key="Your_Voted_Items">To przedstawiłeś do głosowania</msg>
+  <msg key="Your_Votes">Twoje głosy</msg>
 </message_catalog>
