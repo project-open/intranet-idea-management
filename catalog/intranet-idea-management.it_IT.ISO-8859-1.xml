@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<message_catalog package_key="intranet-idea-management" locale="it_IT" charset="ISO-8859-1">
+
+  <msg key="Accepted">Accettate</msg>
+  <msg key="Done">Realizzate</msg>
+  <msg key="New">Nuova idea</msg>
+</message_catalog>
