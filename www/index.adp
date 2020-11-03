@@ -6,7 +6,7 @@
 <property name="sub_navbar">@idea_navbar_html;noquote@</property>
 </if>
 
-<script type="text/javascript">
+<script type="text/javascript" <if @::__csp_nonce@ not nil>nonce="@::__csp_nonce;literal@"</if>>
 Thumbs_up_pale = new Image();
 Thumbs_up_pale.src = "@thumbs_up_pale_24_gif;noquote@";
 Thumbs_up_pressed = new Image();
@@ -15,6 +15,15 @@ Thumbs_up_pressed.src = "@thumbs_up_pressed_24_gif;noquote@";
 function thumbs_change (name, object) {
   window.document.images[name].src = object.src;
 }
+
+window.addEventListener('load', function() { 
+     document.getElementById('list_check_all').addEventListener('click', function() { acs_ListCheckAll('idea_list', this.checked) });
+});
+</script>
+
+
+
+
 </script>
 
 <if @show_template_p@>
@@ -35,7 +44,7 @@ function thumbs_change (name, object) {
 	    <tr class="list-header">
 		<if @user_is_admin_p@>
 		<th class="list-narrow" align=center>
-			<input type=checkbox name="_dummy" onclick="acs_ListCheckAll('idea_list', this.checked)" title="Check/uncheck all rows">
+			<input id=list_check_all type=checkbox name="_dummy" title="Check/uncheck all rows">
 		</th>
 		</if>
 		<th class="list-narrow">#intranet-idea-management.Votes#</th>
